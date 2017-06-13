@@ -1,0 +1,45 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/thing-if/apps/wire_mock_app_id/targets/thing:thing-id/commands/XXXXXXXX",
+    "headers" : {
+      "Authorization" : {
+        "equalTo" : "Bearer owner-access-token-1234"
+      },
+      "X-Kii-AppKey" : {
+        "equalTo" : "wire_mock_app_key"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody" : {
+      "commandID" : "XXXXXXXX",
+      "commandState" : "SENDING",
+      "actions" : [
+        {
+          "AirConditionerAlias" : [
+            {
+              "turnPower" : true
+            }
+          ]
+        }
+      ],
+      "actionResults" : [
+        {
+          "AirConditionerAlias" : [
+            {
+              "turnPower" : {
+                "succeeded" : true
+              }
+            }
+          ]
+        }
+      ],
+      "created" : 0
+    }
+  }
+}
