@@ -1,7 +1,10 @@
 {
+  "scenarioName": "To do list",
+  "requiredScenarioState": "Get command",
+  "newScenarioState": "Started",
   "request": {
     "method": "GET",
-    "url": "/thing-if/apps/wire_mock_app_id/targets/thing:thing-id/commands/XXXXXXXX",
+    "url": "/thing-if/apps/wire_mock_app_id/targets/thing:thing-id/commands/YYYYYYYY",
     "headers" : {
       "Authorization" : {
         "equalTo" : "Bearer owner-access-token-1234"
@@ -17,24 +20,13 @@
       "Content-Type": "application/json"
     },
     "jsonBody" : {
-      "commandID" : "XXXXXXXX",
-      "commandState" : "DONE",
+      "commandID" : "YYYYYYYY",
+      "commandState" : "SENDING",
       "actions" : [
         {
           "AirConditionerAlias" : [
             {
               "turnPower" : true
-            }
-          ]
-        }
-      ],
-      "actionResults" : [
-        {
-          "AirConditionerAlias" : [
-            {
-              "turnPower" : {
-                "succeeded" : true
-              }
             }
           ]
         }

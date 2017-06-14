@@ -1,0 +1,20 @@
+{
+  "scenarioName": "To do list",
+  "requiredScenarioState": "Started",
+  "newScenarioState": "Get command",
+  "request": {
+    "method": "POST",
+    "url": "/thing-if/apps/wire_mock_app_id/targets/thing:thing-id/commands",
+    "bodyPatterns" : [
+      {
+        "equalToJson" : "{\"issuer\":\"user:my-owner-id\",\"actions\":[{\"AirConditionerAlias\":[{\"turnPower\":true}]}]}"
+      }
+    ]
+  },
+  "response": {
+    "status": 201,
+    "jsonBody" : {
+      "commandID" : "YYYYYYYY"
+    }
+  }
+}
