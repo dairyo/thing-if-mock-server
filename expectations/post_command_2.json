@@ -22,6 +22,8 @@
     "jsonBody" : {
       "commandID" : "YYYYYYYY",
       "commandState" : "SENDING",
+      "target" : "thing:target_thing_id",
+      "issuer" : "user:issuer_id",
       "actions" : [
         {
           "AirConditionerAlias" : [
