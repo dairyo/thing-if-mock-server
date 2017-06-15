@@ -1,0 +1,50 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "/thing-if/apps/test-onboard-with-id-option-success/onboardings",
+    "headers" : {
+      "Authorization" : {
+        "equalTo" : "Bearer accesstoken"
+      },
+      "X-Kii-AppID" : {
+        "equalTo" : "test-onboard-with-id-option-success"
+      },
+      "X-Kii-AppKey" : {
+        "equalTo" : "http_mock_key"
+      },
+      "Content-Type" : {
+        "matches" : "application/vnd.kii.OnboardingWithThingIDByOwner\\+json(.*)"
+      },
+      "X-Kii-SDK" : {
+        "matches" : "^sn=.*;sv=.*;pv=.*"
+      }
+    },
+    "bodyPatterns" : [
+      {
+        "equalToJson" : "{\"thingID\":\"thing-id\",\"owner\":\"user:owner-id\",\"thingPassword\":\"thing-password\",\"layoutPosition\":\"STANDALONE\"}"
+      }
+    ]
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody" : {
+      "thingID":"thing-id",
+      "accessToken":"accesstoken",
+      "mqttEndpoint":{
+        "installationID":"4qxjayegngnfcq3f8sw7d9l0e",
+        "host":"kii.com",
+        "mqttTopic" : "testtopic",
+        "userName":"testuser",
+        "password":"testpassword",
+        "portSSL":445,
+        "portTCP":85,
+        "portWS":12470,
+        "portWSS":12473,
+        "ttl":2147483647
+      }
+    }
+  }
+}

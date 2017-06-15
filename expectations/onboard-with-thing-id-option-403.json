@@ -1,0 +1,31 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "/thing-if/apps/test-onboard-with-id-option-403/onboardings",
+    "headers" : {
+      "Authorization" : {
+        "equalTo" : "Bearer accesstoken"
+      },
+      "X-Kii-AppID" : {
+        "equalTo" : "test-onboard-with-id-option-403"
+      },
+      "X-Kii-AppKey" : {
+        "equalTo" : "http_mock_key"
+      },
+      "Content-Type" : {
+        "matches" : "application/vnd.kii.OnboardingWithThingIDByOwner\\+json(.*)"
+      },
+      "X-Kii-SDK" : {
+        "matches" : "^sn=.*;sv=.*;pv=.*"
+      }
+    },
+    "bodyPatterns" : [
+      {
+        "equalToJson" : "{\"thingID\":\"thing-id\",\"owner\":\"user:owner-id\",\"thingPassword\":\"thing-password\",\"layoutPosition\":\"STANDALONE\"}"
+      }
+    ]
+  },
+  "response": {
+    "status": 403
+  }
+}
